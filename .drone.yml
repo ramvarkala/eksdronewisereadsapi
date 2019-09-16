@@ -10,11 +10,12 @@ steps:
 - name: publish
   image: plugins/docker
   settings:
-    registry: registry.hub.docker.com      
-    repo: registry.hub.docker.com/ramalingam81/dronewiseapi
-    tags: [ latest, 4.0, 4 ]
-  environment: 
+    auto_tag: true
+    auto_tag_suffix: amd64    
+    repo: ramalingam81/dronewiseapi
     username:
       from_secret: docker_username
     password:
       from_secret: docker_password
+  when:
+    event: push
