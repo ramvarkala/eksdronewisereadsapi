@@ -11,5 +11,5 @@ steps:
   image: plugins/docker
   settings:
     repo: ramalingam81/dronewiseapi
-    tags: [ latest, 3.0, 3 ]
-    secrets: [ docker_username, docker_password ]
+    tags: [ latest, 4.0, 4 ]
+    secrets: [ DOCKER_USERNAME, DOCKER_PASSWORD ]
