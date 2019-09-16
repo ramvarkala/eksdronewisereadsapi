@@ -12,12 +12,12 @@ steps:
   settings:
     tags: [ latest, 1.0, 1 ]
     repo: 603308524888.dkr.ecr.ap-south-1.amazonaws.com/dronews-api
-    access_key:
+    registry: 603308524888.dkr.ecr.ap-south-1.amazonaws.com
+    username:
       from_secret: ecr_accesskey
-    secret_key:
+    password:
       from_secret: ecr_secretkey
-    region:
-      from_secret: ecr_region      
+    region: ap-south-1
   when:
     event: push
 
