@@ -12,5 +12,4 @@ steps:
   settings:
     repo: ramalingam81/dronewiseapi
     tags: [ latest, 3.0, 3 ]
-    username: ramalingam81
-    password: Ramu@2190
+    secrets: [ docker_username, docker_password ]
