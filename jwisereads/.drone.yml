@@ -1,0 +1,16 @@
+kind: pipeline
+type: docker
+name: default
+steps:
+- name: builing_wiseapi
+  image: java:openjdk-8-alpine
+  commands:
+    - ./gradlew clean build
+# to push docker image into dockerhub
+- name: publish
+  image: plugins/docker
+  settings:
+    repo: ramalingam81/dronewiseapi
+    tags: [ latest, 3.0, 3 ]
+    username: ramalingam81
+    password: Ramu@2190
