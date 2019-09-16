@@ -10,8 +10,7 @@ steps:
 - name: publish
   image: plugins/docker
   settings:
-    auto_tag: true
-    auto_tag_suffix: amd64    
+    tags: [ latest, 4.0, 4 ]
     repo: ramalingam81/dronewiseapi
     username:
       from_secret: docker_username
