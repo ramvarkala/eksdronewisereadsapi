@@ -6,15 +6,26 @@ steps:
   image: java:openjdk-8-alpine
   commands:
     - ./gradlew clean build
-# to push docker image into dockerhub
+# to push docker image into ecrrepo
 - name: publish
-  image: plugins/docker
+  image: plugins/ecr
   settings:
-    tags: [ latest, 4.0, 4 ]
-    repo: ramalingam81/dronewiseapi
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
+    tags: [ latest, 1.0, 1 ]
+    repo: 603308524888.dkr.ecr.ap-south-1.amazonaws.com/dronews-api
+    access_key:
+      from_secret: ecr_accesskey
+    secret_key:
+      from_secret: ecr_secretkey
+    region:
+      from_secret: ecr_region      
   when:
     event: push
+
+
+
+    #settings:
+    #    access_key: AKIAYY575QVMJVGKHJ4F
+    #    secret_key: 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
+    #    region: ap-south-1
+    #    repo: 603308524888.dkr.ecr.ap-south-1.amazonaws.com/drone
+    #    registry: 603308524888.dkr.ecr.ap-south-1.amazonaws.com
