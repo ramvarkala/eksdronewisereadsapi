@@ -14,6 +14,7 @@ steps:
       from_secret: aws_access_key_id
     secret_key:
       from_secret: aws_secret_access_key
+    region: ap-south-1  
     tags: [ latest, 1.0, 1 ]
     repo: 603308524888.dkr.ecr.ap-south-1.amazonaws.com/dronews-api
     registry: 603308524888.dkr.ecr.ap-south-1.amazonaws.com
