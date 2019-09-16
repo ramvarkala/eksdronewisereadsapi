@@ -9,9 +9,11 @@ steps:
 # to push docker image into dockerhub
 - name: publish
   image: plugins/docker
-  environment:
-    repo: ramalingam81/dronewiseapi
-    tags: [ latest, 4.0, 4 ]
+  settings:
+    repo: ramalingam81/drone
+    tags: [ latest, 5.0, 5 ]
+  environment: 
+    repo: varkalaramalingam/eksdronewisereadsapi
     username:
       from_secret: docker_username
     password:
