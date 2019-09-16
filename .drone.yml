@@ -13,19 +13,10 @@ steps:
     tags: [ latest, 1.0, 1 ]
     repo: 603308524888.dkr.ecr.ap-south-1.amazonaws.com/dronews-api
     registry: 603308524888.dkr.ecr.ap-south-1.amazonaws.com
-    username:
+    access_key:
       from_secret: ecr_accesskey
-    password:
+    secret_key:
       from_secret: ecr_secretkey
     region: ap-south-1
   when:
     event: push
-
-
-
-    #settings:
-    #    access_key: AKIAYY575QVMJVGKHJ4F
-    #    secret_key: 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
-    #    region: ap-south-1
-    #    repo: 603308524888.dkr.ecr.ap-south-1.amazonaws.com/drone
-    #    registry: 603308524888.dkr.ecr.ap-south-1.amazonaws.com
