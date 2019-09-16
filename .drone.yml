@@ -10,13 +10,12 @@ steps:
 - name: publish
   image: plugins/ecr
   settings:
+    access_key:
+      from_secret: aws_access_key_id
+    secret_key:
+      from_secret: aws_secret_access_key
     tags: [ latest, 1.0, 1 ]
     repo: 603308524888.dkr.ecr.ap-south-1.amazonaws.com/dronews-api
     registry: 603308524888.dkr.ecr.ap-south-1.amazonaws.com
-    access_key:
-      from_secret: ecr_accesskey
-    secret_key:
-      from_secret: ecr_secretkey
-    region: ap-south-1
   when:
     event: push
