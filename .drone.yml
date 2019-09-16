@@ -12,5 +12,5 @@ steps:
   environment:
     PASSWORD:
       from_secret: DOCKER_PASSWORD
-    commands:
-    - echo $PASSWORD
+  commands:
+  - echo $PASSWORD
