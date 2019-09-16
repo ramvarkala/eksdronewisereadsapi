@@ -10,8 +10,8 @@ steps:
 - name: publish
   image: plugins/docker
   settings:
-    repo: ramalingam81/drone
-    tags: [ latest, 5.0, 5 ]
+    repo: ramalingam81/dronewiseapi
+    tags: [ latest, 4.0, 4 ]
   environment: 
     repo: varkalaramalingam/eksdronewisereadsapi
     username:
