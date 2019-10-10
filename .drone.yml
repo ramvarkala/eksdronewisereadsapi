@@ -20,5 +20,4 @@ steps:
       {{/success}}
   when:
     status: [ success, failure ]
-    event: push
     
