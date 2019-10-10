@@ -10,7 +10,7 @@ steps:
   image: plugins/slack
   settings:
     webhook: https://hooks.slack.com/services/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
-    channel: kubernetes
+    channel: #kubernetes
     link_names: true
     template: >
       {{#success build.status}}
