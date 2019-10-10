@@ -9,11 +9,12 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: kubernetes
+    username: varkalaramalingam
     template: >
       {{#success build.status}}
-        build {{build.number}} succeeded. Good job.
+        build {{build.number}} success_lingam. Good job.
       {{else}}
         build {{build.number}} failed. Fix me please.
       {{/success}}
