@@ -8,8 +8,7 @@ steps:
 #    - ./gradlew clean build
 - name: slack
   image: plugins/slack
-  settings:
-    webhook: https://hooks.slack.com/services/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
-    channel: kubernetes
+  webhook: https://hooks.slack.com/services/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
+  channel: kubernetes
   when:
     status: [ success, failure ]  
