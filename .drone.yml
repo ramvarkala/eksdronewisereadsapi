@@ -2,10 +2,10 @@ kind: pipeline
 type: docker
 name: default
 steps:
-- name: builing_wiseapi
-  image: java:openjdk-8-alpine
-  commands:
-    - ./gradlew clean build
+#- name: builing_wiseapi
+#  image: java:openjdk-8-alpine
+#  commands:
+#    - ./gradlew clean build
 - name: slack
   image: plugins/slack
   settings:
