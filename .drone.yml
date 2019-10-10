@@ -9,7 +9,7 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: kubernetes
     username: varkalaramalingam
   when:
