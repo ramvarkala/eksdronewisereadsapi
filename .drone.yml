@@ -14,4 +14,4 @@ steps:
     username: varkalaramalingam
   when:
     status: [ success, failure ]
-    event: push
+    
