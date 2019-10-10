@@ -6,17 +6,8 @@ steps:
   image: java:openjdk-8-alpine
   commands:
     - ./gradlew clean build
-# to push docker image into ecrrepo
-- name: publish
-  image: plugins/ecr
+- name: slack
+  image: plugins/slack
   settings:
-    access_key:
-      from_secret: aws_access_key_id
-    secret_key:
-      from_secret: aws_secret_access_key
-    region: ap-south-1  
-    tags: [ latest, 1.0, 1 ]
-    repo: 603308524888.dkr.ecr.ap-south-1.amazonaws.com/dronews-api
-    registry: 603308524888.dkr.ecr.ap-south-1.amazonaws.com
-  when:
-    event: push
+    webhook: https://hooks.slack.com/services/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
+    channel: kubernetes
