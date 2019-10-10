@@ -9,7 +9,7 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: kubernetes
   when:
     status: [ success, failure ]
