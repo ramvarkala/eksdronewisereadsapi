@@ -11,10 +11,10 @@ steps:
   settings:
     webhook: https://hooks.slack.com/services/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
     channel: kubernetes
-    username: varkalaramalingam
+    link_names: true
     template: >
       {{#success build.status}}
-        build {{build.number}} succeeded. Good job.
+        build {{build.number}} succeeded. Good job. <@varkalaramalingam>
       {{else}}
-        build {{build.number}} failed. Fix me please.
+        build {{build.number}} failed. Fix me please. <@kubernetes> <@svarkala2190>
       {{/success}}    
