@@ -11,10 +11,5 @@ steps:
   settings:
     webhook: https://hooks.slack.com/services/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
     channel: kubernetes
-    link_names: true
-    template: >
-      {{#success build.status}}
-        build {{build.number}} succeeded. Good job. <@varkalaramalingam>
-      {{else}}
-        build {{build.number}} failed. Fix me please. <@kubernetes> <@svarkala2190>
-      {{/success}}    
+  when:
+    status: [ success, failure ]  
