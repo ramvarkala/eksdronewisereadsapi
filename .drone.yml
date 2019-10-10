@@ -1,17 +1,23 @@
 kind: pipeline
-type: docker
-name: default
+
 steps:
-- name: builing_wiseapi
-  image: java:openjdk-8-alpine
+- name: test
+  image: node
   commands:
-    - ls
+  - ls
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: kubernetes
     username: varkalaramalingam
+    template: >
+      {{#success build.status}}
+        build {{build.number}} succeeded. Good job.
+      {{else}}
+        build {{build.number}} failed. Fix me please.
+      {{/success}}
   when:
     status: [ success, failure ]
+    event: push
     
