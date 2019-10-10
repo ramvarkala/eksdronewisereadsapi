@@ -2,13 +2,14 @@ kind: pipeline
 type: docker
 name: default
 steps:
-#- name: builing_wiseapi
-#  image: java:openjdk-8-alpine
-#  commands:
-#    - ./gradlew clean build
+- name: builing_wiseapi
+  image: java:openjdk-8-alpine
+  commands:
+    - ls
 - name: slack
   image: plugins/slack
-  webhook: https://hooks.slack.com/services/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
-  channel: kubernetes
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channel: kubernetes
   when:
     status: [ success, failure ]  
